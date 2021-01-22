@@ -1,0 +1,23 @@
+server:
+  port: 8089
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot-jpa?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    #添加spring-boot-starter-security后设置对应的用户名和密码
+  security:
+    user:
+     name: admin
+     password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    spring:
+      jpa: database-platform=org.hibernate.dialect.MySQLDialect
+
+logging:
+  level:debug
+
